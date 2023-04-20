@@ -19,6 +19,8 @@
     if ($curr_class == "Wybierz klasę") {
         echo "<p>Poproś nauczyciela o wybranie klasy</p>";
         exit();
+} else {
+    header("Location: ${_SERVER['REMOTE-ADDR']}/examinee/index.php");
     }
     ?>
     <form action="examinee/index.php" method="POST" id="form">
