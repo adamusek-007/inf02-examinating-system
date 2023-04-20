@@ -14,10 +14,10 @@ include ("operator-backend.php")
 
 <body>
     <nav>
-        <h1>INF 02 Widok operatora</h1>
+        <h1>INF.02 Widok nauczyciela</h1>
     </nav>
     <main>
-        <p>Strona dla uczniów: [adresip]/examinee</p>
+        <p>Strona dla uczniów: <?=$_SERVER['SERVER_ADDR']?>/examinee</p>
         <section id="tasks-questions">
             <?= printTasks($con) ?>
         </section>
