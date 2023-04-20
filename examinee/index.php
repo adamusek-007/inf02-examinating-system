@@ -174,5 +174,5 @@
         </div>
     </form>
 </body>
-<script src="jakisjs.js"></script>
+<script src="javascript.js"></script>
 </html>
