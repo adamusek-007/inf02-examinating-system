@@ -44,7 +44,7 @@ function videoOrImage($has_file, $file_name) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odpowiadaj</title>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -61,16 +61,16 @@ function videoOrImage($has_file, $file_name) {
                 <legend>Wybierz odpowiedź</legend>
                 <input type="submit" name="answer_1" <?php if (isset($answer) && $answer == "1")
                     echo "checked"; ?>
-                    value="<?= $row["answer_1"] ?>" onclick='elemele(this)'><br>
+                    value="<?= $row["answer_1"] ?>" onclick='submitForm(this)'><br>
                 <input type="submit" name="answer_2" <?php if (isset($answer) && $answer == "2")
                     echo "checked"; ?>
-                    value="<?= $row["answer_2"] ?>" onclick='elemele(this)'><br>
+                    value="<?= $row["answer_2"] ?>" onclick='submitForm(this)'><br>
                 <input type="submit" name="answer_3" <?php if (isset($answer) && $answer == "3")
                     echo "checked"; ?>
-                    value="<?= $row["answer_3"] ?>" onclick='elemele(this)'><br>
+                    value="<?= $row["answer_3"] ?>" onclick='submitForm(this)'><br>
                 <input type="submit" name="answer_4" <?php if (isset($answer) && $answer == "4")
                     echo "checked"; ?>
-                    value="<?= $row["answer_4"] ?>" onclick='elemele(this)'><br>
+                    value="<?= $row["answer_4"] ?>" onclick='submitForm(this)'><br>
             </fieldset>
         </div>
         <div id="q-id-input" class="display-none"><?php echo $row["id"]; ?></div>

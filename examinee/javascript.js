@@ -6,7 +6,7 @@ form.addEventListener("submit", function(event) {
     
 });
 
-function elemele(userAnswerElement) {
+function submitForm(userAnswerElement) {
 
     var userAnswer = userAnswerElement.getAttribute("name");
     var correctAnswer = document.getElementById("correct-answer").innerHTML;
@@ -22,6 +22,7 @@ function elemele(userAnswerElement) {
             setTimeout(() => {  form.submit(); }, 1500);
         } else if (correctAnswer == ""){
             // ! W przypadku gdy nie ma zadeklarowanej poprawnej odpowiedzi
+            userAnswerElement.classList.add("opacity");
             setTimeout(() => {  form.submit(); }, 1500);
         } else {
             // ! W przypadku gdy jest źle
