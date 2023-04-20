@@ -1,6 +1,6 @@
 var klasaInpt = document.getElementById("klasa");
 
-function someAjax(id) {
+function updateTask(id) {
     var lenght = id.length;
     var taskId = id.slice(0, lenght-1);
     var answer = id.slice(lenght-1, lenght);
