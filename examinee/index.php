@@ -39,29 +39,21 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
             }
             ?>
         <div>
-        <fieldset id="user-answer">
-            <legend>Wybierz odpowiedź</legend>
-            <input type="submit" name="answer_1" <?php if (isset($answer) && $answer == "1")
-                echo "checked"; ?>
-                value="<?= $row["answer_1"] ?>" onclick='elemele(this)'><label>
-                
-            </label><br>
-            <input type="submit" name="answer_2" <?php if (isset($answer) && $answer == "2")
-                echo "checked"; ?>
-                value="<?= $row["answer_2"] ?>" onclick='elemele(this)'><label>
-                
-            </label><br>
-            <input type="submit" name="answer_3" <?php if (isset($answer) && $answer == "3")
-                echo "checked"; ?>
-                value="<?= $row["answer_3"] ?>" onclick='elemele(this)'><label>
-                
-            </label><br>
-            <input type="submit" name="answer_4" <?php if (isset($answer) && $answer == "4")
-                echo "checked"; ?>
-                value="<?= $row["answer_4"] ?>" onclick='elemele(this)'><label>
-                
-            </label><br>
-        </fieldset>
+            <fieldset id="user-answer">
+                <legend>Wybierz odpowiedź</legend>
+                <input type="submit" name="answer_1" <?php if (isset($answer) && $answer == "1")
+                    echo "checked"; ?>
+                    value="<?= $row["answer_1"] ?>" onclick='elemele(this)'><br>
+                <input type="submit" name="answer_2" <?php if (isset($answer) && $answer == "2")
+                    echo "checked"; ?>
+                    value="<?= $row["answer_2"] ?>" onclick='elemele(this)'><br>
+                <input type="submit" name="answer_3" <?php if (isset($answer) && $answer == "3")
+                    echo "checked"; ?>
+                    value="<?= $row["answer_3"] ?>" onclick='elemele(this)'><br>
+                <input type="submit" name="answer_4" <?php if (isset($answer) && $answer == "4")
+                    echo "checked"; ?>
+                    value="<?= $row["answer_4"] ?>" onclick='elemele(this)'><br>
+            </fieldset>
         </div>
     </form>
 </body>
