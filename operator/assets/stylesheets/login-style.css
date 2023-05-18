@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(67, 81, 101);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 9px 0px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(91, 101, 116);
+}
+
+#lock-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 30px;
+    width: 100%;
+}
+
+input[type=password] {
+    width: 85%;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
