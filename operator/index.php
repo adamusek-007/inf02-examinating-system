@@ -1,6 +1,7 @@
 <?php
-include("operator-backend.php");
+include("bootstrap.php");
 checkIsOperatorLoggedIn();
+$con = getConnectionToDatabase();
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -9,7 +10,6 @@ checkIsOperatorLoggedIn();
     <title>Operator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./assets/stylesheets/operator.css"> -->
     <link rel="stylesheet" href="./assets/stylesheets/style.css">
     <link rel="stylesheet" href="../../fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="../../fontawesome/css/solid.css">

@@ -1,7 +1,8 @@
 <?php
-include ("operator-backend.php");
+include ("bootstrap.php");
 if(isset($_POST["password"])) {
-    login($con);
+    $connection = getConnectionToDatabase();
+    login($connection);
 }
 ?>
 <!DOCTYPE html>

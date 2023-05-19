@@ -1,6 +1,4 @@
 <?php
-include("../connection.php");
-$con = getConnectionToDatabase();
 function printClasses($con)
 {
     $stmt = $con->prepare("SELECT `class` FROM `classes`;");
@@ -78,7 +76,6 @@ function printTasks($con)
         echo "</form>";
     }
 }
-
 function checkIsOperatorLoggedIn() {
     $cookie_name = "logged-in";
     if (!isset($_COOKIE[$cookie_name])) {
