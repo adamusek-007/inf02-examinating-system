@@ -63,13 +63,15 @@ function printTasks($con)
         for ($x = 1; $x <= 4; $x++) {
             $answer = ${"answer_$x"};
             if ($$c_answer == $answer) {
+                echo "<div class=\"answer-row\">";
                 echo "<input id='${i}${x}' type='radio' name='answer' onclick='updateTask(this.id)' checked>";
-                echo $answer;
-                echo "</input><br>";
+                echo "<label>${answer}</label>";
+                echo "</div>";
             } else {
+                echo "<div class=\"answer-row\">";
                 echo "<input id='${i}${x}' type='radio' name='answer' onclick='updateTask(this.id)'>";
-                echo $answer;
-                echo "</input><br>";
+                echo "<label>${answer}</label>";
+                echo "</div>";
             }
 
         }
@@ -82,15 +84,12 @@ function checkIsOperatorLoggedIn() {
     if (!isset($_COOKIE[$cookie_name])) {
         header("Location: login.php");
     }
-    // if() {
-        // exit;
-    // }
 }
 
-function login($con) {
+function login($connection) {
     $password = $_POST["password"];
     $query = "CALL VerifyPassword(\"${password}\");";
-    $result = $con->query($query);
+    $result = $connection->query($query);
     if ($result->rowCount() > 0) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
         if ($row["PasswordOK"] == 1) {
