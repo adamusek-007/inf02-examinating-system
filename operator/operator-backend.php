@@ -60,7 +60,7 @@ function printTasks($con)
 
         for ($x = 1; $x <= 4; $x++) {
             $answer = ${"answer_$x"};
-            if ($$c_answer == $answer) {
+            if (isset($$c_answer) && $$c_answer == $answer) {
                 echo "<div class=\"answer-row\">";
                 echo "<input id='${i}${x}' type='radio' name='answer' onclick='updateTask(this.id)' checked>";
                 echo "<label>${answer}</label>";
@@ -76,14 +76,19 @@ function printTasks($con)
         echo "</form>";
     }
 }
-function checkIsOperatorLoggedIn()
+function checkIsOperatorLoggedIn($level)
 {
+    $i = 0;
+    $text = "";
+    while ($i < $level) {
+        $text = $text . "../";
+        $i++;
+    }
     $cookie_name = "logged-in";
     if (!isset($_COOKIE[$cookie_name])) {
-        header("Location: login.php");
+        header("Location: ${text}login.php");
     }
 }
-
 function login($connection)
 {
     $password = $_POST["password"];

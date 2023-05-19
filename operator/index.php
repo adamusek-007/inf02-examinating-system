@@ -1,6 +1,6 @@
 <?php
 include("bootstrap.php");
-checkIsOperatorLoggedIn();
+checkIsOperatorLoggedIn(0);
 $con = getConnectionToDatabase();
 ?>
 <!DOCTYPE html>
