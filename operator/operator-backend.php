@@ -76,21 +76,23 @@ function printTasks($con)
         echo "</form>";
     }
 }
-function checkIsOperatorLoggedIn() {
+function checkIsOperatorLoggedIn()
+{
     $cookie_name = "logged-in";
     if (!isset($_COOKIE[$cookie_name])) {
         header("Location: login.php");
     }
 }
 
-function login($connection) {
+function login($connection)
+{
     $password = $_POST["password"];
     $query = "CALL VerifyPassword(\"${password}\");";
     $result = $connection->query($query);
     if ($result->rowCount() > 0) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
         if ($row["PasswordOK"] == 1) {
-            setcookie("logged-in", "true", time()+3600*24);
+            setcookie("logged-in", "true", time() + 3600 * 24);
             header("Location: index.php");
         }
     }
