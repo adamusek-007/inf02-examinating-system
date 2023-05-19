@@ -20,14 +20,14 @@ checkIsOperatorLoggedIn();
     <nav>
         <h1>INF.02 Widok nauczyciela</h1>
         <div class="buttons-nav">
-            <a href="./change-password.php" class="nav-row"><i class="fas fa-lock"></i>
+            <a href="./change-password/" class="nav-row"><i class="fas fa-lock"></i>
                 <p>Zmiana hasła</p>
             </a>
-            <a href="./export-data.php" class="nav-row">
+            <a href="./export-data/" class="nav-row">
                 <i class="fa-solid fa-file-export"></i>
                 <p>Eksport danych</p>
             </a>
-            <a href="./import-data.php" class="nav-row">
+            <a href="./import-data/" class="nav-row">
                 <i class="fa-solid fa-file-import"></i>
                 <p>Import danych</p>
             </a>
@@ -36,6 +36,12 @@ checkIsOperatorLoggedIn();
     <main>
         <p>Strona dla uczniów:
             <a href="/examinee"><?= $_SERVER['SERVER_ADDR'] ?>/examinee</a>
+        </p>
+        <p>
+            <a href="./manage-exams/" target="_blank">
+                Egzaminy
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
         </p>
         <section id="tasks-questions">
             <?= printTasks($con) ?>
