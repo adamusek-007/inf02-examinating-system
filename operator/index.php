@@ -35,7 +35,7 @@ $con = getConnectionToDatabase();
     </nav>
     <main>
         <p>Strona dla uczniów:
-            <a href="/examinee"><?= $_SERVER['SERVER_ADDR'] ?>/examinee</a>
+            <a href="/examinee/"><?= $_SERVER['SERVER_ADDR'] ?>/examinee</a>
         </p>
         <p>
             <a href="./manage-exams/" target="_blank">
