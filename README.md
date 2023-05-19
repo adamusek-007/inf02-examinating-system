@@ -4,6 +4,6 @@ Actual functionality is that teacher set's up correct answer's and students can 
 ## Note
 In the future I'll be developing this app.
 ## Teachers main view:
-![image](https://github.com/adamusek-007/App-Examinating-System-Website/assets/122128430/ddf134d0-3e29-4051-9e72-88c283554e35)
+![image](https://github.com/adamusek-007/App-Examinating-System-Website/assets/122128430/ae63b2fb-72ef-4541-95df-e217aaa0728f)
 ## Student view:
-![image](https://github.com/adamusek-007/App-Examinating-System-Website/assets/122128430/725e1cf7-8103-4d82-9bf3-19e31de978f5)
+![image](https://github.com/adamusek-007/App-Examinating-System-Website/assets/122128430/60d08475-85ee-48b6-ace6-79af6b3ecb4c)
