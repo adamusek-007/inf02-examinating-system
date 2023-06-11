@@ -9,8 +9,6 @@ const DB_NAME = "zadania";
  */
 function getConnectionToDatabase(): PDO
 {
-
-
     static $pdo;
     if (!$pdo) {
         return new PDO(
