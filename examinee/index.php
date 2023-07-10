@@ -27,9 +27,9 @@ function videoOrImage($has_file, $file_name) {
                 'JPG'
             )
         ) {
-            echo "<img width='320' height='auto' src='/files${file_name}' alt='Błąd wczytywania zdjęcia :)'>";
+            echo "<img width='320' height='auto' src='/files{$file_name}' alt='Błąd wczytywania zdjęcia :)'>";
         } else {
-            echo "<video width='320' height='auto' controls><source src='/files${file_name}' type='video/mp4'></video>";
+            echo "<video width='320' height='auto' controls><source src='/files{$file_name}' type='video/mp4'></video>";
         }
         echo "<br>";
     }

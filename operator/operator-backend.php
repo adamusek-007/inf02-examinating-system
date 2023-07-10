@@ -31,7 +31,7 @@ function printTasks($con)
 
         //! GENERATE VIEW SECTION
         echo "<form>";
-        echo "<h4>${id}. ${content}</h4>";
+        echo "<h4>{$id}. {$content}</h4>";
         if ($has_file) {
             if (
                 str_contains(
@@ -51,24 +51,24 @@ function printTasks($con)
                     'JPG'
                 )
             ) {
-                echo "<img width='320' height='auto' src='/files${file_name}' alt='Błąd wczytywania zdjęcia :)'>";
+                echo "<img width='320' height='auto' src='/files{$file_name}' alt='Błąd wczytywania zdjęcia :)'>";
             } else {
-                echo "<video width='320' height='auto' controls><source src='/files${file_name}' type='video/mp4'></video>";
+                echo "<video width='320' height='auto' controls><source src='/files{$file_name}' type='video/mp4'></video>";
             }
             echo "<br>";
         }
 
         for ($x = 1; $x <= 4; $x++) {
-            $answer = ${"answer_$x"};
+            $answer = {$"answer_$x"};
             if (isset($$c_answer) && $$c_answer == $answer) {
                 echo "<div class=\"answer-row\">";
-                echo "<input id='${i}${x}' type='radio' name='answer' onclick='updateTask(this.id)' checked>";
-                echo "<label>${answer}</label>";
+                echo "<input id='{$i}{$x}' type='radio' name='answer' onclick='updateTask(this.id)' checked>";
+                echo "<label>{$answer}</label>";
                 echo "</div>";
             } else {
                 echo "<div class=\"answer-row\">";
-                echo "<input id='${i}${x}' type='radio' name='answer' onclick='updateTask(this.id)'>";
-                echo "<label>${answer}</label>";
+                echo "<input id='{$i}{$x}' type='radio' name='answer' onclick='updateTask(this.id)'>";
+                echo "<label>{$answer}</label>";
                 echo "</div>";
             }
 
@@ -86,7 +86,7 @@ function checkIsOperatorLoggedIn($level)
     }
     $cookie_name = "logged-in";
     if (!isset($_COOKIE[$cookie_name])) {
-        header("Location: ${text}login.php");
+        header("Location: {$text}login.php");
     }
 }
 function login($connection)

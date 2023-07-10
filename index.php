@@ -9,7 +9,7 @@ if ($curr_class == "Wybierz klasę") {
     echo "<p>Poproś nauczyciela o wybranie klasy</p>";
     exit();
 } else {
-    header("Location: ${_SERVER['REMOTE-ADDR']}/examinee/");
+    header("Location: {$_SERVER['REMOTE-ADDR']}/examinee/");
 }
 ?>
 <!DOCTYPE html>
