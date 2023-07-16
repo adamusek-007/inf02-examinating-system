@@ -59,7 +59,8 @@ function printTasks($con)
         }
 
         for ($x = 1; $x <= 4; $x++) {
-            $answer = {$"answer_$x"};
+            $ans = "answer_{$x}";
+            $answer = $$ans;
             if (isset($$c_answer) && $$c_answer == $answer) {
                 echo "<div class=\"answer-row\">";
                 echo "<input id='{$i}{$x}' type='radio' name='answer' onclick='updateTask(this.id)' checked>";
