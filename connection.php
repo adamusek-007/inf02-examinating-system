@@ -11,7 +11,7 @@ function getConnectionToDatabase(): PDO
 {
     static $pdo;
     if (!$pdo) {
-         try {return new PDO(
+        try {$pdo = new PDO(
             sprintf("mysql:host=%s;dbname=%s;charset=UTF8", DB_HOST, DB_NAME),
             DB_USER,
             DB_PASSWORD,
