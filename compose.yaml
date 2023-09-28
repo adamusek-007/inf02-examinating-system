@@ -16,7 +16,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: zadania
     volumes:
-      - ./database/scripts/:docker-entrypoint-initdb.d/
+      - ./database/scripts/:/docker-entrypoint-initdb.d/
     ports:
       - 3306:3306
     healthcheck:
