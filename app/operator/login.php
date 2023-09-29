@@ -13,9 +13,6 @@ if(isset($_POST["password"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaloguj się</title>
-    <link href="../fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="../fontawesome/css/brands.css" rel="stylesheet">
-    <link href="../fontawesome/css/solid.css" rel="stylesheet">
     <link href="./assets/stylesheets/login-style.css" rel="stylesheet">
 </head>
 
@@ -24,7 +21,6 @@ if(isset($_POST["password"])) {
         <h1>Wprowadź hasło:</h1>
         <div class="line">
             <div id="lock-background">
-                <i class="fas fa-lock"></i>
             </div>
             <input type="password" name="password">
         </div>

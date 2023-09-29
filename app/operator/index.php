@@ -11,24 +11,19 @@ $con = getConnectionToDatabase();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/stylesheets/style.css">
-    <link rel="stylesheet" href="../../fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="../../fontawesome/css/solid.css">
-    <link rel="stylesheet" href="../../fontawesome/css/brands.css">
 </head>
 
 <body>
     <nav>
         <h1>INF.02 Widok nauczyciela</h1>
         <div class="buttons-nav">
-            <a href="./change-password/" class="nav-row"><i class="fas fa-lock"></i>
+            <a href="./change-password/" class="nav-row">
                 <p>Zmiana hasła</p>
             </a>
             <a href="./export-data/" class="nav-row">
-                <i class="fa-solid fa-file-export"></i>
                 <p>Eksport danych</p>
             </a>
             <a href="./import-data/" class="nav-row">
-                <i class="fa-solid fa-file-import"></i>
                 <p>Import danych</p>
             </a>
         </div>
@@ -40,7 +35,6 @@ $con = getConnectionToDatabase();
         <p>
             <a href="./manage-exams/" target="_blank">
                 Egzaminy
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
         </p>
         <section id="tasks-questions">
